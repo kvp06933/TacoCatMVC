@@ -1,0 +1,18 @@
+﻿@model TacoCatMVC.Models.TacoCat;
+
+    <div class="container">
+        <h1>TacoCat</h1>
+        <form asp-controller="TacoCatMVC" asp-action="Index" method="post">
+            <div class="form-group">
+                <label asp-for="UserInput" class="col-form-label">Start Value</label>
+                <input type="text" asp-for="UserInput" value="@Model.UserInput" class="form-control" placeholder="Enter Start Value" />
+            </div>
+            <button class="btn btn-dark" type="submit" value="submit">TacoCat</button>
+        </form>
+        <div class="container">
+            <h1>Results</h1>
+            <p class="form-control">@Model.UserInput</p>
+            <p class="form-control">@Model.RevWord</p>
+            <p class="form-control">@Model.Message</p>
+        </div>
+    </div>
